@@ -2,38 +2,41 @@
 {
     padding:0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+
 }
 
 html
 {
     font-size: 10px;
-    font-family: 'Roboto' , sans-serif ;
-    
+    font-family: 'Roboto' , sans-serif ;    
 }
 
 body
 {
     width: 100%;
     height: 100%;
-    background: url("sitebg.jpg") no-repeat center fixed;
+    background: url("Untitled design.png") no-repeat center fixed ;
     background-size: cover;
-    overflow-x: hidden;
+    z-index: 0;
+    margin: 0;
 }
 
 section
 {
     padding: 6rem 0;
+    scroll-behavior: smooth;
 }
 
-h1, h5, p
+h1, h5, p, i, a ,h4, ul li
 {
-    color: #eee;
+    color: rgb(71, 71, 71);
 }
 
 a
 {
     text-decoration: none;
-    color: #eee;
+    color: #00C2CB;
 }
 
 p
@@ -67,13 +70,17 @@ img{
 
 .section-heading h1
 {
-    font-size: 5rem;
-    color: rgba(255,255,255, .3);
+    font-size: 7rem;
+    font-family: 'The Historia Demo', sans-serif;
+    user-select: none;
+
     text-transform: uppercase;
     font-weight: 300;
     position: relative;
     margin-bottom: 1rem;
 }
+
+
 
 .section-heading h1::before,
 .section-heading h1::after
@@ -135,7 +142,6 @@ header
 {
     font-size: 2rem;
     font-weight: 200;
-    color: #eee;
 }
 .landing-text .hello
 {
@@ -150,29 +156,51 @@ header
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 10rem;
+    margin-bottom: 15rem;
 }
 
-.about .about-info
+.about .container2
 {
+    display: flex;
     align-items: center;
+    justify-content: center;
+    margin-bottom: 10rem;
+    width: 90%;
+    max-width: 120rem;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
 }
 
 .about .about-info ul li
 {
     display: flex;
-    margin-left: 40%;
     justify-content: left;
     margin-bottom: 2rem;
     font-size: 2.2rem;
     text-decoration: none;
-    color: #eee;
+}
 
-}
-.about .icon i
+.about .about-info .icon
 {
-    margin-right: 3rem;
+    width: 40px;
+    height: 40px;
+    background: rgb(243, 243, 243);
+    color: #0bb5f4;
+    border-radius: 50%;
+    margin-right: 15px;
+    font-size: 22px;
+    position: relative;
 }
+
+.about .about-info .icon i
+{
+    position: absolute;
+    top : 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
 .about-heading
 {
     text-align: center;
@@ -200,12 +228,16 @@ header
     flex: 1;
     margin-right: 5rem;
 }
-
+.profile-img2
+{
+    flex: 1;
+    margin-left: 5rem;
+}
 .about-details
 {
     flex: 1;
-
 }
+
 
 .social-media ul li
 {
@@ -273,20 +305,20 @@ header
     font-size: 2rem;
     letter-spacing: 3px;
     margin: 2rem -2px 2rem 0;
-    color: #eee;
+    color: rgb(43, 43, 43);
 }
 
 .skill p
 {
     font-weight: 100;
-    color: #eee;
+    color: rgb(43, 43, 43);
 }
 
 
 
 .icon-container i
 {
-    color: #ffffff;
+    color: rgb(43, 43, 43);
     font-size: 5rem;
     margin: auto;
 }
@@ -323,8 +355,8 @@ header
 {
     width: 10rem;
     height: 10rem;
-    border: 3px solid #c9c9c9;
-    background-color: #494949;
+    border: 3px solid #9c9c9c;
+    background-color: #b9b9b9;
     margin-bottom: 2rem;
     display: flex;
     transform: rotate(45deg);
@@ -332,7 +364,7 @@ header
 
 .concepts-icon-container i
 {
-    color: #ffffff;
+    color: rgb(43, 43, 43);
     font-size: 6rem;
     margin: auto;
     transform: rotate(-45deg);
@@ -401,7 +433,7 @@ header
 
 .timeline ul
 {
-    border-left: 4px solid #ffe838;
+    border-left: 4px solid rgba(34, 34, 34, 0.377);
     background-color: rgba(0,0,0,0.05);
     margin: 0 auto;
     position: relative;
@@ -455,18 +487,18 @@ header
     text-align: right;
     min-width: 12rem;
     font-size: 1.8rem;
-    color: #eee;
+    color: rgb(43, 43, 43);
 }
 
 .timeline .date::after
 {
     content: '';
-    box-shadow: 0 0 0 4px #ffe838;
+    box-shadow: 0 0 0 4px #222222;
     border-radius: 100%;
     left: -5.9rem;
     height: 1.5rem;
     width: 1.5rem;
-    background-color: #313534;
+    background-color:  rgba(34, 34, 34, 0.377);
 }
 
 
@@ -475,7 +507,7 @@ header
 
 .contact
 {
-    background-color: #e2e2e2;
+    background-color: #d6d6d656;
 }
 
 form
@@ -498,7 +530,7 @@ select
     margin-bottom: 5px;
     outline-color: #fd57bf;
     background: transparent;
-    border: 0.1rem solid rgba(75, 75, 75, 0.2);
+    border: 0.1rem solid rgba(46, 46, 46, 0.2);
     border-radius: 0.5rem;
 }
 
@@ -550,6 +582,7 @@ input[type="submit"]
     background-color: #16162d;
     padding: 2rem 0;
     position: relative;
+    margin-bottom: -2rem;
 }
 
 .up
@@ -558,7 +591,7 @@ input[type="submit"]
     width: 5rem;
     height: 5rem;
     background-color: #eee;
-    top: -2.5rem;
+    bottom: 3rem;
     right: 5rem;
     border-radius: 100%;
     animation: pulse 2s infinite;
@@ -602,7 +635,7 @@ input[type="submit"]
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: rgb(36, 36, 36);
+    background-color: rgb(80, 80, 80);
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 3.75rem;
@@ -643,7 +676,7 @@ input[type="submit"]
 {
     top: 0;
     margin: 3rem 3rem;
-    color: #eee;
+    color: #00C2CB;
     position: fixed;
     z-index: 10;
 }
@@ -657,6 +690,5 @@ input[type="submit"]
 
 
 /*--------------------------------------------------------------*/
-
 
 
