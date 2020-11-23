@@ -16,7 +16,8 @@ body
 {
     width: 100%;
     height: 100%;
-    background: url("Untitled design.png") no-repeat center fixed ;
+    background: url("Untitled design33.png") no-repeat center fixed ;
+    background-color: #eeeeee;
     background-size: cover;
     z-index: 0;
     margin: 0;
@@ -119,8 +120,77 @@ header
 {
     width: 100%;
     height: 100vh;
+    margin-top: 0;
+    padding-top: 1rem;
+}
+  
+.sidenav 
+{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(20, 20, 20);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 3.75rem;
+}
+  
+.sidenav a 
+{
+    padding: 0.5rem 0.5rem 0.5rem 3rem;
+    text-decoration: none;
+    font-size: 2.5rem;
+    color: #ffffff;
+    display: block;
+    transition: 1s;
+    margin-bottom: 3rem;
+    border-bottom: 2px solid rgba(34, 34, 34, 0.377);
+}
+  
+.sidenav a:hover 
+{
+    background-color: #d1d1d1;
+    color: #5bb0f5;
+}
+  
+.sidenav .closebtn 
+{
+    position: absolute;
+    top: 0;
+    right: 1.5rem;
+    font-size: 6rem;
+    margin-left: 3.1rem;
+}
+  
+.sidebar-social-media ul li
+{
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
 }
 
+.sidebar-social-media
+{
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 5rem;
+}
+
+.sidebar-social-media i
+{
+    font-size: 3rem;
+    transition: color 650ms;
+    color: white;
+}
+
+#main-body
+{
+    transition: margin-left 1.8s;
+    padding: 1rem;
+}
 
 .landing-text
 {
@@ -185,7 +255,7 @@ header
 {
     width: 40px;
     height: 40px;
-    background: rgb(243, 243, 243);
+    background: rgb(216, 216, 216);
     color: #0bb5f4;
     border-radius: 50%;
     margin-right: 15px;
@@ -199,6 +269,7 @@ header
     top : 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+    color: rgb(85, 197, 32);
 }
 
 .about-heading
@@ -207,7 +278,7 @@ header
     text-transform: uppercase;
     line-height: 0;
     margin-bottom: 6rem;
-
+    color: thistle;
 }
 
 .about-heading h1 
@@ -319,7 +390,7 @@ header
 .icon-container i
 {
     color: rgb(43, 43, 43);
-    font-size: 5rem;
+    font-size: 6rem;
     margin: auto;
 }
 
@@ -328,13 +399,10 @@ header
 
 /*--------------Tools------------*/
 
-.tools-technologies 
-{
-    margin-bottom: 10rem;
-}
+
 .tools-technologies .column {
     float: left;
-    width: 50%;
+    justify-content: center;
     text-align: left;
     font-size: 2rem;
     letter-spacing: 0.5rem;
@@ -351,13 +419,20 @@ header
 
 /*--------------concepts----------------*/
 
+.skills-section2
+{
+    background-color: #d1d1d1;
+    margin: 0 3rem;
+    height: 100vh;
+
+}
+
 .concepts-icon-container
 {
     width: 10rem;
     height: 10rem;
     border: 3px solid #9c9c9c;
     background-color: #b9b9b9;
-    margin-bottom: 2rem;
     display: flex;
     transform: rotate(45deg);
 }
@@ -370,62 +445,6 @@ header
     transform: rotate(-45deg);
 }
 
-
-
-/*---------------------portfolio-------------------*/
-
-
-.portfolio-item
-{
-    display: flex ;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 10rem;
-}
-
-.portfolio-item:last-child
-{
-    margin-bottom: 0;
-}
-
-.portfolio-img
-{
-    flex: 1;
-}
-
-.portfolio-description
-{
-    flex: 1;
-}
-
-.portfolio-description h5
-{
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    font-weight: 300;
-}
-
-.portfolio-description h1
-{
-    font-size: 3rem;
-    font-weight: 300;
-    margin: 1rem 0;
-}
-
-.portfolio-description .cta
-{
-    display: inline-block;
-    margin-top: 2.5rem;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    color: #3882ff;
-    transition: color 650ms;
-}
-
-.portfolio-description .cta:hover
-{
-    color: #153777;
-}
 
 
 
@@ -505,11 +524,6 @@ header
 /*------------Contact----------------*/
 
 
-.contact
-{
-    background-color: #d6d6d656;
-}
-
 form
 {
     width: 40%;
@@ -528,9 +542,8 @@ select
     height: 5rem;
     padding: 1rem;
     margin-bottom: 5px;
-    outline-color: #fd57bf;
     background: transparent;
-    border: 0.1rem solid rgba(46, 46, 46, 0.2);
+    border: 0.2rem solid rgba(46, 46, 46, 0.5);
     border-radius: 0.5rem;
 }
 
@@ -540,12 +553,20 @@ textarea
     height: 10rem;
     padding: 1rem;
     margin-bottom: 5px;
-    outline-color: #fd57bf;
     background: transparent;
-    border: 0.1rem solid rgba(75, 75, 75, 0.2);
+    border: 0.2rem solid rgba(75, 75, 75, 0.5);
     border-radius: 0.5rem;
+    font-family: 'Roboto' , sans-serif;
+    color: rgb(71, 71, 71);
+    background: transparent;
+    font-size: 1.5rem;
 }
+select
+{
+    color: rgba(71, 71, 71,0.7);
+    background: transparent;
 
+}
 select .dropdown
 {
     width: 100%;
@@ -558,16 +579,19 @@ select .dropdown
     border-radius: 0.5rem;
 }
 
+
+
 input[type="submit"]
 {
     width: initial;
-    height: 5rem;
-    color: #221e22;
+    height: 4rem;
+    color: #eeecee;
     background-color: #13a513;
     padding: 1rem 2rem;
     border-radius: .8rem;
     cursor: pointer;
     transition: background-color 650ms;
+    border: none;
 }
 
 
@@ -608,6 +632,8 @@ input[type="submit"]
 .copyright p
 {
     font-size: 1.4rem;
+    color: lavender;
+    letter-spacing: .2rem;
 }
 
 @keyframes pulse
@@ -626,56 +652,10 @@ input[type="submit"]
     }
 }
 
-  
-.sidenav 
-{
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: rgb(80, 80, 80);
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 3.75rem;
-}
-  
-.sidenav a 
-{
-    padding: 0.5rem 0.5rem 0.5rem 2rem;
-    text-decoration: none;
-    font-size: 3rem;
-    color: #ffffff;
-    display: block;
-    transition: 1s;
-    margin-bottom: 3rem;
-}
-  
-.sidenav a:hover 
-{
-    color: #f1f1f1;
-}
-  
-.sidenav .closebtn 
-{
-    position: absolute;
-    top: 0;
-    right: 1.5rem;
-    font-size: 6rem;
-    margin-left: 3.1rem;
-}
-  
-#main-body
-{
-    transition: margin-left 1.8s;
-    padding: 1rem;
-}
-
 .Menubtn
 {
     top: 0;
-    margin: 3rem 3rem;
+    margin: 2rem 3rem;
     color: #00C2CB;
     position: fixed;
     z-index: 10;
@@ -688,7 +668,499 @@ input[type="submit"]
 }
 
 
-
 /*--------------------------------------------------------------*/
 
 
+@media screen and (max-width: 100px)
+{
+    body
+    {
+        background: url("Untitled design.png") no-repeat center fixed ;
+        background-size: cover;
+        overflow-x: hidden;
+    }
+
+    .landing-text h1
+    {
+        font-size: 15rem;
+    }
+    .landing-text h4
+    {
+        font-size: 1.7;
+    }
+    .about-heading h1
+    {
+        font-size: 8rem;
+    }
+    .section-heading h1
+    {
+        font-size: 3rem;
+    }
+    .about-details
+    {
+        flex-direction: initial;
+    }
+    .about-details li
+    {
+        margin: 0 2;
+    }
+    .icon-container
+    {
+        width: 7rem;
+        height: 7rem;
+    }
+    .timeline ul
+    {
+        margin: 0 0 0 auto;
+    }
+    .timeline .date::before
+    {
+        left: -20rem;
+    }
+    .timeline .date::after
+    {
+        left: -5.9rem;
+    }
+    form
+    {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 640px)
+{
+    *
+    {
+        scroll-behavior: smooth;
+
+    }
+    body
+    {
+        background: url("Untitled design2.png") no-repeat center fixed ;
+        background-size: cover;
+        overflow-x: hidden;
+    }
+
+    .landing-text .hello
+    {
+        font-size: 4rem;
+        margin-top: 20rem;
+    }
+    .landing-text h1
+    {
+        font-size: 10rem;
+    }
+    .landing-text h4
+    {
+        font-size: 2.2rem;
+    }
+
+/*------------------About---------------------------------*/
+
+    .about .container,
+    .about .container2
+    {
+        flex-direction: column;
+        width: 70%;
+        margin-bottom: 5rem;
+    }
+    .about-container .social-media ul li i
+    {
+        display: hidden;
+    }
+    .about-container
+    {
+        flex-direction: column;
+    }
+    .about-heading h1
+    {
+        font-size: 5rem;
+        order: 2;
+    }
+    
+    .about .container  p
+    {
+        order: 3;
+    }
+    .container2 .profile-img2
+    {
+        display: none;
+    }
+   
+    .about .container2 .about-details ul li
+    {
+        font-size: 1.8rem;
+    }
+   
+    .about .container2 .about-details .icon 
+    {
+        font-size: 1.8rem;
+        width: 30px;
+        height: 30px;
+    }
+   
+
+
+/*------------------Languages---------------------------------*/
+
+    .skills-section1 .container .section-heading h1
+    {
+        font-size: 5rem;
+    }
+
+    .skills-section1 .container .my-skills h1
+    {
+        font-size: 2rem;
+        margin-top: 0.8rem;
+    }
+    .skills-section1 .container .my-skills p
+    {
+        font-size: 1.5rem;
+        margin-top: 0;
+    }
+    .skills-section1 .container .my-skills1 i
+    {
+        font-size: 5rem;
+        margin-bottom: 0;
+    }
+    .skills-section1 .container .skill
+    {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+/*---------------------Concepts------------------------------*/
+    
+.skills-section2 .container .section-heading h1
+    {
+        font-size: 5rem;
+    }
+    .concepts-icon-container
+    {
+        width: 6rem;
+        height: 6rem;
+        border: 3px solid #9c9c9c;
+        background-color: #b9b9b9;
+        margin-bottom: 1rem;
+        display: flex;
+        transform: rotate(45deg);
+    }
+
+    .concepts-icon-container i
+    {
+        color: rgb(43, 43, 43);
+        font-size: 4rem;
+        margin: auto;
+        transform: rotate(-45deg);
+    }
+
+    .skills-section2 .container .skill
+    {
+        margin-bottom: 1rem;
+    }
+    .skills-section2 .container .skill h1
+    {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+    .skills-section2 .container .skill p
+    {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+/*--------------------------Tools-----------------------------------*/
+
+
+    .tools-section .section-heading h1
+    {
+        font-size: 5rem;
+    }
+    .tools-section 
+    {
+        margin-bottom: 10rem;
+    }
+    .tools-technologies .column {
+        float: left;
+        width: 50%;
+        justify-content: center;
+        text-align: left;
+        font-size: 1.4rem;
+        letter-spacing: 0.3rem;
+        padding-left: 100%;
+        padding-right: 95%;        
+        margin-bottom: 30rem;
+      }
+    .tools-technologies .column .tool
+    {
+        padding-bottom: 1rem;
+        display: grid;
+    }
+
+/*--------------------Portfolio-------------------------------*/
+
+    .portfolio .container h1
+    {
+        font-size: 5rem;
+    }
+    .portfolio-img
+    {
+        margin: 0 0 7rem 0;
+    }
+    .portfolio-item
+    {
+        flex-direction: column;
+    }
+    .portfolio-img
+    {
+        margin: 0 0 2rem 0;
+        order: 1;
+    }
+    .portfolio-description
+    {
+        margin: 0;
+        order: 2;
+    }
+
+    
+/*--------------------Portfolio-------------------------------*/
+
+    .timeline p
+    {
+        font-size: 1.5rem;
+    }
+    .timeline .date::before
+    {
+        font-size: 1.4rem;
+    }
+    .timeline ul
+    {
+        width: 80%;
+    }
+   
+/*--------------------Form-------------------------------*/
+
+    form
+    {
+        width: 80%;
+    }
+    .up
+    {
+        right: 2rem;
+    }
+
+/*--------------------Footer-------------------------------*/
+
+.copyright p
+
+    {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 1080px)
+{
+    *
+    {
+        scroll-behavior: smooth;
+
+    }
+    body
+    {
+        background: url("Untitled design2.png") no-repeat center fixed ;
+        background-size: cover;
+        overflow-x: hidden;
+    }
+
+    .landing-text .hello
+    {
+        font-size: 4rem;
+    }
+    .landing-text h1
+    {
+        margin-top: 0;
+        font-size: 10rem;
+    }
+    .landing-text h4
+    {
+        margin-top: 0;
+        font-size: 2.3rem;
+    }
+
+/*------------------About---------------------------------*/
+
+    .about .container,
+    .about .container2
+    {
+        width: 70%;
+        margin-bottom: 5rem;
+    }
+    .about-container .social-media ul li i
+    {
+        display: hidden;
+    }
+    .about-container
+    {
+        flex-direction: column;
+    }
+    .about-heading h1
+    {
+        font-size: 6rem;
+        order: 2;
+    }
+    
+    .about .container  p
+    {
+        order: 3;
+    }
+    
+   
+    .about .container2 .about-details ul li
+    {
+        font-size: 1.8rem;
+    }
+   
+    .about .container2 .about-details .icon 
+    {
+        font-size: 1.8rem;
+        width: 30px;
+        height: 30px;
+    }
+   
+
+
+/*------------------Languages---------------------------------*/
+
+    .skills-section1 .container .section-heading h1
+    {
+        font-size: 6rem;
+    }
+
+    .skills-section1 .container .my-skills h1
+    {
+        font-size: 2.3rem;
+        margin-top: 1rem;
+    }
+    .skills-section1 .container .my-skills p
+    {
+        font-size: 1.5rem;
+        margin-top: 0;
+    }
+    .skills-section1 .container .my-skills1 i
+    {
+        font-size: 5rem;
+        margin-bottom: 0;
+    }
+    .skills-section1 .container .skill
+    {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+/*---------------------Concepts------------------------------*/
+    
+.skills-section2 .container .section-heading h1
+    {
+        font-size: 5rem;
+    }
+    .concepts-icon-container
+    {
+        width: 7rem;
+        height: 7rem;
+        border: 3px solid #9c9c9c;
+        background-color: #b9b9b9;
+        margin-bottom: 1rem;
+        display: flex;
+        transform: rotate(45deg);
+    }
+
+    .concepts-icon-container i
+    {
+        color: rgb(43, 43, 43);
+        font-size: 4.5rem;
+        margin: auto;
+        transform: rotate(-45deg);
+    }
+
+    .skills-section2 .container .skill
+    {
+        margin-bottom: 1rem;
+    }
+    .skills-section2 .container .skill h1
+    {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    .skills-section2 .container .skill p
+    {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+/*--------------------------Tools-----------------------------------*/
+
+
+    .tools-section .section-heading h1
+    {
+        font-size: 5rem;
+    }
+    .tools-section 
+    {
+        margin-bottom: 10rem;
+    }
+    .tools-technologies .column {
+        float: left;
+        width: 50%;
+        justify-content: center;
+        text-align: left;
+        font-size: 1.4rem;
+        letter-spacing: 0.3rem;
+        padding-left: 15%;
+        padding-right: 15%;
+        margin-bottom: 30rem;
+      }
+    .tools-technologies .column .tool
+    {
+        padding-bottom: 1rem;
+        display: grid;
+    }
+
+
+/*--------------------Timeline-------------------------------*/
+    .education
+    {
+        padding-left: 15%;
+    }
+    .timeline h1
+    {
+        font-size: 2rem;
+    }
+    .timeline p
+    {
+        font-size: 1.6rem;
+    }
+    .timeline .date::before
+    {
+        font-size: 2rem;
+    }
+    
+   
+/*--------------------Form-------------------------------*/
+
+    form
+    {
+        width: 60%;
+    }
+    .up
+    {
+        right: 2rem;
+    }
+
+/*--------------------Footer-------------------------------*/
+
+.copyright p
+
+    {
+        font-size: 1.4rem;
+    }
+}
