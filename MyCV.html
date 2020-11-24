@@ -15,55 +15,88 @@
         <link rel="stylesheet" href="main.css">
     </head>
 
-    <body id="main-body">
+    <body id="main-body" onload="move()">
         <script src="https://kit.fontawesome.com/34cfd915df.js" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
         <script src="main.js"></script>
-
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js" integrity="sha512-zuZ5wVszlsRbRF/vwXD0QS/tHzBYHFzCD/BT0lI3yrWhNZFWDkkF3KPEY//WTanqxwPdZkskQ+xZo0rnfHBc5A==" crossorigin="anonymous"></script>
+        
         <header>
-            
-            <div id="mySidenav" class="sidenav">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <a href="MyCV.html">Home</a>
-                <a href="#about">About</a>
-                <a href="#education">Education</a>
-                <a href="#languages">Languages</a>
-                <a href="#concepts">Concepts</a>
-                <a href="#tools&tech">Tools & Technologies</a>
-                <a href="#cont">Contacts</a>
+            <div class="parallelogram"></div>
 
-                <div class="sidebar-social-media">
-                    <ul class="new-list">
-                        <li>
-                            <a href="# " class="icon-name">
-                                <i class="fab fa-facebook-square"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="# " class="icon-name">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="# " class="icon-name">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                        </li>
-                    </ul>
+            <div class="area" >
+
+                <ul class="circles">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                </ul>
+
+                <div id="mySidenav" class="sidenav">
+                    <div class="close">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                    </div>
+                    <div class="menulist">
+                        <a href="MyCV.html"><i class="fas fa-home"></i>Home</a>
+                        <a href="#about"><i class="fas fa-user"></i>About</a>
+                        <a href="#education"><i class="fas fa-university"></i>Education</a>
+                        <a href="#languages"><i class="fas fa-terminal"></i>Languages</a>
+                        <a href="#concepts"><i class="fas fa-server"></i>Concepts</a>
+                        <a href="#tools&tech"><i class="fas fa-tools"></i>Tools & Technologies</a>
+                        <a href="#cont"><i class="fas fa-phone"></i>Contacts</a>
+                    </div>
+    
+                    <div class="downloadcv">
+                        <button type="button" onclick="move()">
+                            <i class="fas fa-download"></i>          
+                            Download CV          
+                        </button>
+                    </div>
+                    <div class="sidebar-social-media">
+                        <ul class="new-list">
+                            <li>
+                                <a href="# " class="icon-name">
+                                    <i class="fab fa-facebook-square"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="# " class="icon-name">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="# " class="icon-name">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-              
-            <div id="main">
-                <span class="Menubtn" id="Menubtn" style="font-size:5rem;cursor:pointer" onclick="openNav()" >&#9776;</span>
-            </div>
+                  
+                <div class="main" id="main">
+                    <label for="check">
+                        <i class="fas fa-bars" id="menubtn" onclick="openNav()"></i>
+                    </label>
+                </div>  
+    
+                <div class="landing-text">
+                    <h4 class="hello">Hello...</h4>
+                    <h1>I'm <br>Sithira</h1>
+                    <h4>Welcome</h4>
+                </div>
+            </div >
+
             
-            <div class="landing-text">
-                <h4 class="hello">Hello...</h4>
-                <h1>I'm <br>Sithira</h1>
-                <h4>Web Developer/Programer</h4>
-            </div>
         </header>
 
         <section class="about" id="about">
@@ -78,7 +111,7 @@
                         <h1>About</h1>
                     </div>
                     <p>
-                        Sithira. This is the first part of a 2 part video tutorial where you'll learn to create a responsive personal portfolio website from scratch using some elements of CSS Flexbox, Grid, and much more. I hope you enjoy this tutorial!
+                        Hi.. I Sithira, am a passionate, self-motivated, responsible and hard working person with strong team working skills and ability to adapt to challenging situations. I'm able to work well both in team environments, as well as an induvidual. 
                     </p>
 
                     <div class="social-media">
@@ -108,53 +141,46 @@
 
                 <div class="about-details" data-aos="fade-left" data-aos-delay="200">
                     <div class="about-info">
+                       
                         <ul>
                             <li>
-                                <div class="icon">
-                                    
-                                </div>
-        
                                 <div class="data">
-                                    Age : 23 <br>
+                                    <span><i class="fas fa-birthday-cake"></i></i>Name</span>
+                                    <span>Sithira Senanayake</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="data">
+                                    <span><i class="fas fa-birthday-cake"></i>Age</span>
+                                    <span>23</span>
                                 </div>
                             </li>
         
                             <li>
-                                <div class="icon">
-                                    <i class="fas fa-university"></i>
-                                </div>
-        
                                 <div class="data">
-                                    Study : University of Sri Jayewardenepura <br>
+                                    <span><i class="fas fa-university"></i>Study</span>
+                                    <span>University of Sri Jayewardenepura</span>
                                 </div>
                             </li>
         
                             <li>
-                                <div class="icon">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                </div>
                                 <div class="data">
-                                    Location : No: 58, Nedungamuwa, Gampaha
+                                    <span><i class="fas fa-map-marker-alt"></i>Location</span>
+                                    <span>No: 58, Nedungamuwa, Gampaha</span>
                                 </div>
                             </li>
         
                             <li>
-                                <div class="icon">
-                                    <i class="fas fa-phone-alt"></i>
-                                </div>
-        
                                 <div class="data">
-                                    Phone : +94 718807291 <br>
+                                    <span><i class="fas fa-phone-alt"></i>Phone</span>
+                                    <span>+94 718807291</span>
                                 </div>
                             </li>
         
                             <li>
-                                <div class="icon">
-                                    <i class="fas fa-envelope"></i>                                
-                                </div>
-        
                                 <div class="data">
-                                    E-mail : sithirasenanayake@gmail.com <br>
+                                    <span><i class="fas fa-envelope-open"></i>Email</span>
+                                    <span>sithirasenanayake@gmail.com</span>
                                 </div>
                             </li>
                         </ul>
@@ -204,55 +230,56 @@
                             <i class="fab fa-html5"></i>                        
                         </div>
                         <h1>HTML</h1>
-                        <p>HTiek jsgglb  sjrbgbsbjsbl  s jrsb kbsl ttkjsrbs ksrbs  ksjbtkjr sjbjtbskjkbtkjsk </p>
+                        <progress id="file" value="75" max="100" style="background-color: rgb(150, 150, 150);"> 75% </progress>                    
                     </div>
                     <div class="skill" data-aos="fade-right" data-aos-delay="300">
                         <div class="icon-container">
                             <i class="fab fa-css3-alt"></i>                        
                         </div>
                         <h1>CSS</h1>
-                        <p>HTiek jsgglb  sjrbgbsbjsbl  s jrsb kbsl ttkjsrbs ksrbs  ksjbtkjr sjbjtbskjkbtkjsk </p>
+                        <progress id="file" value="65" max="100" style="background-color: rgb(150, 150, 150);"> 65% </progress>
                     </div>
                     <div class="skill"data-aos="fade-left" data-aos-delay="300">
                         <div class="icon-container">
                             <i class="fab fa-js-square"></i>                        
                         </div>
                         <h1>JavaScript</h1>
-                        <p>HTiek jsgglb  sjrbgbsbjsbl  s jrsb kbsl ttkjsrbs ksrbs  ksjbtkjr sjbjtbskjkbtkjsk </p>
+                        <progress id="file" value="40" max="100" style="background-color: rgb(150, 150, 150);"> 40% </progress>
                     </div>
                     <div class="skill"data-aos="fade-left" data-aos-delay="600">
                         <div class="icon-container">
                             <i class="fab fa-java"></i>                        
                         </div>
                         <h1>Java</h1>
-                        <p>HTiek jsgglb  sjrbgbsbjsbl  s jrsb kbsl ttkjsrbs ksrbs  ksjbtkjr sjbjtbskjkbtkjsk </p>
+                        <progress id="file" value="60" max="100" style="background-color: rgb(150, 150, 150);"> 60% </progress>
                     </div>
                     <div class="skill"data-aos="fade-right" data-aos-delay="600">
                         <div class="icon-container">
-                            <i class="fas fa-file-code"></i>                        </div>
+                            <i class="fas fa-file-code"></i>                        
+                        </div>
                         <h1>C</h1>
-                        <p>HTiek jsgglb  sjrbgbsbjsbl  s jrsb kbsl ttkjsrbs ksrbs  ksjbtkjr sjbjtbskjkbtkjsk </p>
+                        <progress id="file" value="55" max="100" style="background-color: rgb(150, 150, 150);"> 55% </progress>
                     </div>
                     <div class="skill"data-aos="fade-right" data-aos-delay="300">
                         <div class="icon-container">
                             <i class="fas fa-code"></i>
                         </div>
                         <h1>Visual Basics</h1>
-                        <p>HTiek jsgglb  sjrbgbsbjsbl  s jrsb kbsl ttkjsrbs ksrbs  ksjbtkjr sjbjtbskjkbtkjsk </p>
+                        <progress id="file" value="40" max="100" style="background-color: rgb(150, 150, 150);"> 40% </progress>
                     </div>
                     <div class="skill"data-aos="fade-left" data-aos-delay="300">
                         <div class="icon-container">
                             <i class="fab fa-python"></i>          
                         </div>
                         <h1>Python</h1>
-                        <p>HTiek jsgglb  sjrbgbsbjsbl  s jrsb kbsl ttkjsrbs ksrbs  ksjbtkjr sjbjtbskjkbtkjsk </p>
+                        <progress id="file" value="30" max="100" style="background-color: rgb(150, 150, 150);"> 30% </progress>
                     </div>
                     <div class="skill"data-aos="fade-left" data-aos-delay="600">
                         <div class="icon-container">
                             <i class="fab fa-php"></i>
                         </div>
                         <h1>php</h1>
-                        <p>HTiek jsgglb  sjrbgbsbjsbl  s jrsb kbsl ttkjsrbs ksrbs  ksjbtkjr sjbjtbskjkbtkjsk </p>
+                        <progress id="file" value="30" max="100" style="background-color: rgb(150, 150, 150);"> 30% </progress>
                     </div>
                 </div>
             </div>
@@ -334,7 +361,7 @@
                 <div class="section-heading">
                     <h1>Contact</h1>
                 </div>
-                <form action="" id="cont" data-aos="fade-up" data-aos-delay="500">
+                <form action="" id="cont" data-aos="fade-up" data-aos-delay="100">
                     <input type="text" id="name" name="name" placeholder="Name" required>
                     <input type="email" id="email" name="email" placeholder="Email" required>
                     <select name="services" id="services">
@@ -351,7 +378,7 @@
         </section>
 
         <footer class="copyright">
-            <div class="up" id="up" onclick="topFunction()">
+            <div class="up" id="up" onclick="topFunction()" >
                 <i class="fas fa-chevron-up"></i>
             </div>
             <p> Designed and Developed by <a href="MyCV.html" class:"Footer-Link">Sithira Senanayake</a></p>
@@ -359,6 +386,5 @@
 
         </footer>
 
-        
     </body>
 </html>

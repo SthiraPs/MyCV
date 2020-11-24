@@ -22,15 +22,14 @@ $(document).ready(function ()
     })
 });
 
-var mybutton = document.getElementById("up");
-
 window.onscroll = function() {scrollFunction()};
+
 function scrollFunction() {
-  if (document.body.scrollTop > 8000 || document.documentElement.scrollTop > 8000) {
-    mybutton.style.display = "block";
+  if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+    up.style.display = "block";
   }
   else {
-    mybutton.style.display = "none";
+    up.style.display = "none";
   }
 }
 
@@ -38,3 +37,30 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+
+$(document).ready(function(){
+	
+	$('.parallelogram').ripples({
+		resolution:512,
+		dropRadius:10
+	});
+	$('header').ripples({
+		resolution:512,
+		dropRadius:20
+	});
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
