@@ -3,7 +3,6 @@
     padding:0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-
 }
 
 html
@@ -19,8 +18,8 @@ body
     background: url("Untitled design.png") no-repeat center fixed ;
     background-color: #e9e9e9;
     background-size: cover;
-    z-index: 0;
     margin: 0;
+    overflow-x: hidden;
 }
 
 section
@@ -46,7 +45,8 @@ p
     font-weight: 300;
 }
 
-img{
+img
+{
     width: 100%;
 }
 
@@ -107,10 +107,7 @@ img{
     font-weight: 300;
 }
 
-.has-margin-right
-{
-    margin-right: 5rem;
-}
+
 
 
 /*---------------------HEADER-------------------*/
@@ -122,23 +119,12 @@ header
     height: 100vh;
     margin-top: 0;
     padding-top: 1rem;
-    clip-path: polygon();
-    z-index: 10;
 }
-.parallelogram {
-	width: 500px;
-	height: 680px;
-	transform: skew(20deg);
-    background: rgba(3, 41, 53,0.2);
-    margin-left: 50rem;
-    z-index: -20;
-    display: flex;
-    background: url("Untitled design2.png") no-repeat center fixed ;
-}
+
 
 .area{
     width: 100%;
-    height:100vh;   
+    height:100vh;
 }
 
 .circles{
@@ -261,7 +247,6 @@ header
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 10;
     top: 0;
     left: 0;
     background-color: #042331;
@@ -301,7 +286,6 @@ header
     color: #042331;
     
 }
-
 .sidenav .close .closebtn 
 {
     width: 100%;
@@ -313,7 +297,6 @@ header
     line-height: 6rem;
     padding-left: 20rem;
 }
-  
 .downloadcv button
 {
     height: 5rem;
@@ -331,9 +314,6 @@ header
     background-color: #3bb13f;
     color: #eee;
 }
-
-
-
 .sidebar-social-media ul li
 {
     text-align: center;
@@ -341,14 +321,12 @@ header
     display: inline-block;
     border-bottom: none;
 }
-
 .sidebar-social-media
 {
     text-align: center;
     margin-bottom: 0;
     margin-top: 2rem;
 }
-
 .sidebar-social-media i
 {
     font-size: 2rem;
@@ -359,40 +337,34 @@ header
 label #menubtn
 {
     cursor: pointer;
-    left: 4rem;
-    top: 4rem;
+    left: 3rem;
+    top: 3rem;
     position: fixed;
     background-color: #042331;
     border-radius: 0.7rem;
     color: rgb(241, 241, 241);
-    font-size: 4rem;
+    font-size: 2.5rem;
     text-align: center;
-    padding: 0.5rem 1rem;
-    z-index: 12;
+    padding: 0.8rem 1rem;
+    z-index: 10;
 }
-
 #main-body
 {
     transition: margin-left 1.8s;
 }
-
 .landing-text
 {
     position: relative;
-    margin-top: 10%;
     width: 100%;
     text-align: center;
-    z-index: 1;
-    top: -70rem;
+    margin-top: 15rem;
 }
-
 .landing-text h1
 {
     font-size: 10rem;
     font-family: 'The Historia Demo', sans-serif;
     user-select: none;
 }
-
 .landing-text h4
 {
     font-size: 2rem;
@@ -412,40 +384,40 @@ label #menubtn
     align-items: center;
     justify-content: center;
     margin-bottom: 15rem;
+    margin-left: 7%;
+    margin-top: 10rem;
 }
 
 .about .container2
 {
-    display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 10rem;
-    max-width: 120rem;
+    max-width: 75rem;
     height: 100%;
-    margin: 0 auto;
     position: relative;
     margin-bottom: 10rem;
+    border: 2px solid ;
+    border-radius: 10px;
+    padding: 2rem 4rem;
+    margin: auto;
+    box-shadow: 5px 5px;
+    background-color: rgba(173, 178, 196, 0.342);
 }
-.container2  ul li .data span:nth-child(1)::after
-{
-    content: ":";
-    position: absolute;
-    right: 105rem;
-}
+
 .container2  ul li .data span:nth-child(1)
 {
     display: inline;
-    width: 10rem;
+    width: 18rem;
     float: left;
 
-    margin-right: 10rem;
 }
 .about .about-info ul li
 {
     display: flex;
     justify-content: left;
     margin-bottom: 2rem;
-    font-size: 2rem;
+    font-size: 2.5rem;
     text-decoration: none;
 }
 
@@ -460,9 +432,6 @@ label #menubtn
     margin-right: 2rem;
     color: #46af66;
 }
-
-
-
 .about-heading
 {
     text-align: center;
@@ -489,6 +458,7 @@ label #menubtn
 {
     flex: 1;
     margin-right: 5rem;
+    z-index: -1;
 }
 .profile-img2
 {
@@ -512,30 +482,113 @@ label #menubtn
 
 .social-media i
 {
-    font-size: 4rem;
+    font-size: 3rem;
     transition: color 650ms;
 }
 
-.fa-facebook-square:hover
+.social-media i:hover
 {
-    color: #4267b2;
+    font-size: 3.1rem;
 }
 
-.fa-twitter:hover
+.fa-facebook-square:hover,
+.sidebar-social-media .fa-facebook-square:hover
 {
-    color: #38a1f3;
+    color: #3b5998;
 }
 
-
-.fa-linkedin:hover
+.fa-linkedin:hover,
+.sidebar-social-media .fa-linkedin:hover
 {
     color: #0e76a8;
 }
 
+.fa-github-square:hover,
+.sidebar-social-media .fa-github-square:hover
+{
+    color: #0e0e0e;
+}
 .social-media ul li
 {
     margin: 0 2rem;
 }
+/*------------Timeline----------------*/
+
+.education
+{
+    margin-left: 10%;
+}
+.timeline ul
+{
+    border-left: 4px solid rgba(102, 102, 102, 0.4);
+    background-color: rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    position: relative;
+    padding: 5rem;
+    list-style: none;
+    width: 70%;
+    margin-bottom: 10rem;
+    border-radius: 20px;
+}
+
+.timeline h1
+{
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    opacity: .9;
+}
+
+.timeline p
+{
+    font-size: 1.5rem;
+}
+
+.timeline .date
+{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    position: relative;
+}
+
+.timeline .date:last-of-type
+{
+    padding: 0;
+    margin-bottom: 0;
+    border: none;
+}
+
+.timeline .date::before,
+.timeline .date::after
+{
+    position: absolute;
+    display: block;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.timeline .date::before
+{
+    content: attr(data-date);
+    left: -22rem;
+    text-align: right;
+    min-width: 12rem;
+    font-size: 1.8rem;
+    color: rgba(20, 20, 20, 0.8);
+}
+
+.timeline .date::after
+{
+    content: '';
+    border-radius: 100%;
+    left: -5.9rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color:  rgb(119, 119, 119);
+}
+
 
 /*---------------------Skills-------------------*/
 
@@ -581,37 +634,43 @@ label #menubtn
     margin: auto;
 }
 
-
-
-
-/*--------------Tools------------*/
-
-
-.tools-technologies .column {
-    float: left;
-    justify-content: center;
-    text-align: left;
-    font-size: 2rem;
-    letter-spacing: 0.5rem;
-    padding-left: 20rem;
-    margin-bottom: 30rem;
-  }
-.tools-technologies .column .tool
+progress
 {
-    padding-bottom: 2rem;
-    
+    border: none;
+    border-radius: 1rem;
+    color: lightcoral;
+    background-color: lightgreen;
 }
 
-
-
+progress {
+    color: lightblue;
+  }
+  
+  progress::-webkit-progress-value {
+    background: lightblue;
+  }
+  
+  progress::-moz-progress-bar {
+    background: lightcolor;
+  }
+  
+  progress::-webkit-progress-value {
+    background: red;
+  }
+  
+  progress::-webkit-progress-bar {
+    background: blue;
+  }
 /*--------------concepts----------------*/
 
 .skills-section2
 {
     background-color: #d1d1d1;
     margin: 0 3rem;
-    height: 100vh;
-
+    height: auto;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-bottom: 0;
 }
 
 .concepts-icon-container
@@ -635,78 +694,24 @@ label #menubtn
 
 
 
-/*------------Timeline----------------*/
 
-.timeline ul
-{
-    border-left: 4px solid rgba(102, 102, 102, 0.4);
-    background-color: rgba(0, 0, 0, 0.1);
-    margin: 0 auto;
-    position: relative;
-    padding: 5rem;
-    list-style: none;
-    width: 70%;
-    margin-bottom: 10rem;
-}
+/*--------------Tools------------*/
 
-.timeline h1
-{
+
+.tools-technologies .column {
+    float: left;
+    justify-content: center;
+    text-align: left;
     font-size: 2rem;
-    text-transform: uppercase;
-    font-weight: 300;
-    margin-bottom: 1rem;
-    opacity: .9;
-}
-
-.timeline p
+    letter-spacing: 0.5rem;
+    padding-left: 20rem;
+    margin-bottom: 30rem;
+  }
+.tools-technologies .column .tool
 {
-    font-size: 1.5rem;
+    padding-bottom: 2rem;
+    
 }
-
-.timeline .date
-{
-    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
-    margin-bottom: 1rem;
-    padding-bottom: 1rem;
-    position: relative;
-}
-
-.timeline .date:last-of-type
-{
-    padding: 0;
-    margin-bottom: 0;
-    border: none;
-}
-
-.timeline .date::before,
-.timeline .date::after
-{
-    position: absolute;
-    display: block;
-    top: 50%;
-    transform: translateY((-50%));
-}
-
-.timeline .date::before
-{
-    content: attr(data-date);
-    left: -22rem;
-    text-align: right;
-    min-width: 12rem;
-    font-size: 1.8rem;
-    color: rgba(20, 20, 20, 0.8);
-}
-
-.timeline .date::after
-{
-    content: '';
-    border-radius: 100%;
-    left: -5.9rem;
-    height: 1.5rem;
-    width: 1.5rem;
-    background-color:  rgb(119, 119, 119);
-}
-
 
 /*------------Contact----------------*/
 
@@ -841,14 +846,6 @@ input[type="submit"]
     }
 }
 
-.Menubtn
-{
-    top: 0;
-    margin: 2rem 3rem;
-    color: #00C2CB;
-    position: fixed;
-    z-index: 10;
-}
 
 @media screen and (max-height: 28.1rem) 
 {
@@ -865,338 +862,13 @@ input[type="submit"]
 /*--------------------Responsive------------------------------------------*/
 /*--------------------Responsive------------------------------------------*/
 
-
-
-
-
-
-
-
-
-/*----------------------Small Mobile-------------------------------------*/
-
-@media screen and (max-width: 100px)
-{
-    body
-    {
-        background: url("Untitled design.png") no-repeat center fixed ;
-        background-size: cover;
-        overflow-x: hidden;
-    }
-
-    .landing-text h1
-    {
-        font-size: 15rem;
-    }
-    .landing-text h4
-    {
-        font-size: 1.7;
-    }
-    .about-heading h1
-    {
-        font-size: 8rem;
-    }
-    .section-heading h1
-    {
-        font-size: 3rem;
-    }
-    .about-details
-    {
-        flex-direction: initial;
-    }
-    .about-details li
-    {
-        margin: 0 2;
-    }
-    .icon-container
-    {
-        width: 7rem;
-        height: 7rem;
-    }
-    .timeline ul
-    {
-        margin: 0 0 0 auto;
-    }
-    .timeline .date::before
-    {
-        left: -20rem;
-    }
-    .timeline .date::after
-    {
-        left: -5.9rem;
-    }
-    form
-    {
-        width: 70%;
-    }
-}
-/*----------------------Mobile-------------------------------------*/
-
-@media screen and (max-width: 640px)
+@media screen and (max-width: 1024px)
 {
     *
     {
         scroll-behavior: smooth;
-
-    }
-    body
-    {
-        background: url("Untitled design2.png") no-repeat center fixed ;
-        background-size: cover;
-        overflow-x: hidden;
-    }
-
-    label #menubtn
-    {
-        left: 2rem;
-        top: 2rem;
-        font-size: 3rem;
-    }
-    .landing-text .hello
-    {
-        font-size: 4rem;
-        margin-top: 20rem;
-    }
-    .landing-text h1
-    {
-        font-size: 10rem;
-    }
-    .landing-text h4
-    {
-        font-size: 2.2rem;
-    }
-
-/*------------------About---------------------------------*/
-
-    .about .container,
-    .about .container2
-    {
-        flex-direction: column;
-        width: 70%;
-        margin-bottom: 5rem;
-    }
-    .about-container .social-media ul li i
-    {
-        display: hidden;
-    }
-    .about-container
-    {
-        flex-direction: column;
-    }
-    .about-heading h1
-    {
-        font-size: 5rem;
-        order: 2;
-    }
-    
-    .about .container  p
-    {
-        order: 3;
-    }
-    .container2 .profile-img2
-    {
-        display: none;
     }
    
-    .about .container2 .about-details ul li
-    {
-        font-size: 1.8rem;
-    }
-   
-    .about .container2 .about-details .icon 
-    {
-        font-size: 1.8rem;
-        width: 30px;
-        height: 30px;
-    }
-   
-
-
-/*------------------Languages---------------------------------*/
-
-    .skills-section1 .container .section-heading h1
-    {
-        font-size: 5rem;
-    }
-
-    .skills-section1 .container .my-skills h1
-    {
-        font-size: 2rem;
-        margin-top: 0.8rem;
-    }
-    .skills-section1 .container .my-skills p
-    {
-        font-size: 1.5rem;
-        margin-top: 0;
-    }
-    .skills-section1 .container .my-skills1 i
-    {
-        font-size: 5rem;
-        margin-bottom: 0;
-    }
-    .skills-section1 .container .skill
-    {
-        margin-top: 0;
-        margin-bottom: 0;
-    }
-
-/*---------------------Concepts------------------------------*/
-    .skills-section2
-    {
-        height: 300vh;
-    }
-    .skills-section2 .container .section-heading h1
-    {
-        font-size: 5rem;
-    }
-    .concepts-icon-container
-    {
-        width: 6rem;
-        height: 6rem;
-        border: 3px solid #9c9c9c;
-        background-color: #b9b9b9;
-        margin-bottom: 1rem;
-        display: flex;
-        transform: rotate(45deg);
-        margin-bottom: 10rem;
-    }
-
-    .concepts-icon-container i
-    {
-        color: rgb(43, 43, 43);
-        font-size: 4rem;
-        margin: auto;
-        transform: rotate(-45deg);
-    }
-
-    .skills-section2 .container .skill
-    {
-        margin-bottom: 1rem;
-    }
-    .skills-section2 .container .skill h1
-    {
-        font-size: 1.8rem;
-        margin-bottom: 1rem;
-    }
-    .skills-section2 .container .skill p
-    {
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-    }
-
-/*--------------------------Tools-----------------------------------*/
-
-
-    .tools-section .section-heading h1
-    {
-        font-size: 5rem;
-    }
-    .tools-section 
-    {
-        margin-bottom: 10rem;
-    }
-    .tools-technologies .column {
-        float: left;
-        width: 50%;
-        justify-content: center;
-        text-align: left;
-        font-size: 1.4rem;
-        letter-spacing: 0.3rem;
-        padding-left: 100%;
-        padding-right: 95%;        
-        margin-bottom: 30rem;
-      }
-    .tools-technologies .column .tool
-    {
-        padding-bottom: 1rem;
-        display: grid;
-    }
-
-/*--------------------Portfolio-------------------------------*/
-
-    .portfolio .container h1
-    {
-        font-size: 5rem;
-    }
-    .portfolio-img
-    {
-        margin: 0 0 7rem 0;
-    }
-    .portfolio-item
-    {
-        flex-direction: column;
-    }
-    .portfolio-img
-    {
-        margin: 0 0 2rem 0;
-        order: 1;
-    }
-    .portfolio-description
-    {
-        margin: 0;
-        order: 2;
-    }
-
-    
-/*--------------------Portfolio-------------------------------*/
-
-    .education .container
-    {
-        margin-left: 5rem;
-    }
-    .education .section-heading h1
-    {
-        font-size: 5rem;
-    }
-    .timeline p
-    {
-        font-size: 1.5rem;
-    }
-    .timeline .date::before
-    {
-        font-size: 1.4rem;
-    }
-    .timeline ul
-    {
-        width: 80%;
-    }
-   
-/*--------------------Form-------------------------------*/
-
-    form
-    {
-        width: 80%;
-    }
-    .up
-    {
-        right: 2rem;
-    }
-
-/*--------------------Footer-------------------------------*/
-
-.copyright p
-
-    {
-        font-size: 1.2rem;
-    }
-}
-
-/*----------------------TAB-------------------------------------*/
-
-
-@media screen and (max-width: 948px)
-{
-    *
-    {
-        scroll-behavior: smooth;
-
-    }
-    body
-    {
-        background: url("Untitled design2.png") no-repeat center fixed ;
-        background-size: cover;
-        overflow-x: hidden;
-    }
     label #menubtn
     {
         left: 2.2rem;
@@ -1217,18 +889,24 @@ input[type="submit"]
         margin-top: 0;
         font-size: 2.3rem;
     }
-
+    .up
+    {
+        width: 4rem;
+        height: 4rem;
+    } 
+    .up i
+    {
+        font-size: 2rem;
+    }
 /*------------------About---------------------------------*/
 
-    .about .container,
+    
     .about .container2
     {
-        width: 70%;
-        margin-bottom: 5rem;
-    }
-    .about-container .social-media ul li i
-    {
-        display: hidden;
+        width: 80%;
+        justify-self: center;
+        margin-top: 0;
+        margin-bottom: 10rem;
     }
     .about-container
     {
@@ -1239,13 +917,14 @@ input[type="submit"]
         font-size: 6rem;
         order: 2;
     }
-    
-    .about .container  p
+    .container2  ul li .data span:nth-child(1)
     {
-        order: 3;
+        display: inline;
+        width: 12rem;
+        float: left;
+
     }
-    
-   
+
     .about .container2 .about-details ul li
     {
         font-size: 1.8rem;
@@ -1257,7 +936,12 @@ input[type="submit"]
         width: 30px;
         height: 30px;
     }
-   
+ /*------------------Education---------------*/
+ 
+    .education
+    {
+        margin-left: 0;
+    }
 
 
 /*------------------Languages---------------------------------*/
@@ -1291,7 +975,7 @@ input[type="submit"]
 /*---------------------Concepts------------------------------*/
     .skills-section2
     {
-        height: 170vh;
+        height: 100%;
         margin-bottom: 10rem;
     }
     .skills-section2 .container .section-heading h1
@@ -1348,8 +1032,8 @@ input[type="submit"]
         width: 50%;
         justify-content: center;
         text-align: left;
-        font-size: 1.4rem;
-        letter-spacing: 0.3rem;
+        font-size: 1.25rem;
+        letter-spacing: 0rem;
         padding-left: 15%;
         padding-right: 15%;
         margin-bottom: 30rem;
@@ -1381,7 +1065,11 @@ input[type="submit"]
     
    
 /*--------------------Form-------------------------------*/
-
+    .contact h1
+    {
+        font-size: 6rem;
+        order: 2;
+    }
     form
     {
         width: 60%;
@@ -1399,66 +1087,296 @@ input[type="submit"]
         font-size: 1.4rem;
     }
 }
-/*----------------------Small PC-------------------------------------*/
 
-@media screen and (max-width: 100px)
+
+@media screen and (max-width: 640px)
 {
-    body
+   
+
+    section
     {
-        background: url("Untitled design.png") no-repeat center fixed ;
-        background-size: cover;
-        overflow-x: hidden;
+        padding: 5rem 0;
+        scroll-behavior: smooth;
+    }
+    p
+    {
+        font-size: 1.8rem;
+        font-weight: 100;
     }
 
-    .landing-text h1
+    img
     {
-        font-size: 15rem;
+        width: 100%;
     }
-    .landing-text h4
+/*-------------------------------------ABOUT------------------*/
+    .about  .container
     {
-        font-size: 1.7;
+        margin-left: 10%;
+        display: block
     }
-    .about-heading h1
+    .about .container2
     {
-        font-size: 8rem;
+        max-width: 765rem;
+        height: 100%;
+        position: relative;
+        margin-bottom: 10rem;
+        border: 2px solid ;
+        padding: 2rem 4rem;
+        margin: 2rem;
+        font-size: 1rem;
+        margin-top: -5rem;
     }
-    .section-heading h1
+    .about .container2 .about-details .data
     {
-        font-size: 3rem;
+        font-size: 1.5rem;
+    }    
+    .about .container2 .about-details .data span:nth-child(1)
+    {
+        width: 10rem;
     }
-    .about-details
+  
+/*-------------------------------------EDUCATION------------------*/
+    .education .section-heading h1
     {
-        flex-direction: initial;
+        font-size: 5rem;
+        margin-left: -15%;
     }
-    .about-details li
+    .education .container .timeline
     {
-        margin: 0 2;
+        margin-left: 2rem;
     }
-    .icon-container
+  
+    .education .timeline ul
     {
-        width: 7rem;
-        height: 7rem;
+        border-left: 4px solid rgba(102, 102, 102, 0.4);
+        background-color: rgba(0, 0, 0, 0.1);
+        margin: 0 auto;
+        position: relative;
+        padding: 5rem;
+        list-style: none;
+        width: 80%;
+        margin-bottom: 10rem;
     }
-    .timeline ul
+    
+    .education .timeline h1
     {
-        margin: 0 0 0 auto;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        font-weight: 300;
+        margin-bottom: 1rem;
+        opacity: .9;
     }
-    .timeline .date::before
+    
+    .education .timeline p
     {
+        font-size: 1.3rem;
+    } 
+    .education .timeline .date::before
+    {
+        content: attr(data-date);
         left: -20rem;
+        text-align: right;
+        min-width: 12rem;
+        font-size: 1.5rem;
+        color: rgba(20, 20, 20, 0.8);
     }
-    .timeline .date::after
+
+/*-------------------------------------LANGUAGES------------------*/
+    .skills-section1  .my-skills .skill 
     {
-        left: -5.9rem;
+        display: grid;
+        grid-gap: 2rem;
+        text-align: center;
+        margin-bottom: 2rem;
     }
-    form
+    .skills-section1  .section-heading h1
     {
-        width: 70%;
+        font-size: 5rem;
     }
+
+    .skills-section1 .container .my-skills .skill h1
+    {
+        font-size: 1.5rem;
+        margin-top: 0rem;
+    }
+    .skills-section1 .container .my-skills progress
+    {
+        font-size: 0.8rem;
+    }
+    .skills-section1 .container .my-skills i
+    {
+        font-size: 4rem;
+        margin-bottom: 0;
+    }
+    .skills-section1 .container .my-skills
+    {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+/*---------------------Concepts------------------------------*/
+    .skills-section2
+    {
+        height: 100%;
+    }
+    .skills-section2 .container .section-heading h1
+    {
+        font-size: 5rem;
+    }
+    .skills-section2 .concepts-icon-container
+    {
+        width: 5rem;
+        height: 5rem;
+        border: 3px solid #9c9c9c;
+        background-color: #b9b9b9;
+        margin-bottom: 0.1rem;
+        display: flex;
+        transform: rotate(45deg);
+    }
+
+    .skills-section2 .concepts-icon-container i
+    {
+        color: rgb(43, 43, 43);
+        font-size: 2.5rem;
+        margin: auto;
+        transform: rotate(-45deg);
+    }
+
+    .skills-section2 .container .skill
+    {
+        margin-bottom: 1rem;
+    }
+    .skills-section2 .container .skill h1
+    {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+    .skills-section2 .container .skill p
+    {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+/*--------------------------Tools-----------------------------------*/
+
+
+    .tools-section .container .section-heading h1
+    {
+        font-size: 5rem;
+    }
+    .tools-section .container .tools-technologies .column
+    {
+        font-size: 1.5rem;
+        width: 100%;    
+        margin-bottom: 0;
+        text-align: left;
+        margin-left: -10rem;
+    }
+
+/*--------------------CONTACT-------------------------------*/
+
+    .contact .container .section-heading h1
+    {
+        font-size: 5rem;
+    }
+    .contact .container form
+    {
+        width: 90%;
+    }
+/*--------------------Footer-------------------------------*/
+    .copyright p
+    {
+        font-size: 1.2rem;
+    }
+
+    .copyright .up
+{
+    position: fixed;
+    display: none;
+    width: 4rem;
+    height: 4rem;
+    background-color: rgb(11, 51, 77);
+    bottom: 3rem;
+    right: 2rem;
+    border-radius: 100%;
+    animation: pulse 2s infinite;
+    cursor: pointer;
+} 
+
+    .copyright .up i
+    {
+        color: #ebebeb;
+        font-size: 2rem;
+        margin-top: 10px;
+    }
+    label #menubtn
+    {
+        cursor: pointer;
+        left: 3rem;
+        top: 3rem;
+        position: fixed;
+        background-color: #042331;
+        border-radius: 0.7rem;
+        color: rgb(241, 241, 241);
+        font-size: 2.5rem;
+        text-align: center;
+        padding: 0.8rem 1rem;
+        z-index: 10;
+    }
+
+  
 }
 
+@media screen and (max-width: 490px)
+{
+   
 
+    section
+    {
+        padding: 5rem 0;
+        scroll-behavior: smooth;
+    }
+    p
+    {
+        font-size: 1.8rem;
+        font-weight: 100;
+    }
 
+    img
+    {
+        width: 100%;
+    }
+/*-------------------------------------ABOUT------------------*/
+    .about  .container
+    {
+        margin-left: 10%;
+        display: block
+    }
+    .about .container2
+    {
+        max-width: 765rem;
+        height: 100%;
+        position: relative;
+        margin-bottom: 10rem;
+        border: 2px solid ;
+        padding: 1rem;
+        margin: 2rem;
+        font-size: 1rem;
+        margin-top: -5rem;
+    }
+    .about .container2 .about-details .data
+    {
+        font-size: 1rem;
+    }    
+    .about .container2 .about-details .data span:nth-child(1)
+    {
+        width: 8rem;
+    }
+    .copyright p
+    {
+        font-size: 1rem;
+    }
+}
 
 
 
