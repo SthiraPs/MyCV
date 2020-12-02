@@ -48,7 +48,21 @@ $(document).ready(function(){
 	$('header').ripples({
 		resolution:512,
 		dropRadius:20
-	});
+  });
+  
+  var typed = new Typed(".typing-2", {
+      strings: ["Developer", "Blogger", "Designer", "Freelancer"],
+      typeSpeed: 100,
+      backSpeed: 50,
+      loop: true
+  });
+  var typed = new Typed(".typing-1", {
+    strings: ["Hello...", "Welcome.."],
+    typeSpeed: 150,
+    backSpeed: 60,
+    loop: true
+});
+
 });
 
 
