@@ -313,6 +313,9 @@ header
     display: inline-block;
     border-bottom: none;
 }
+.sidenav .downloadcv a{
+    color: rgb(39, 39, 39);
+}
 .sidebar-social-media
 {
     text-align: center;
@@ -698,7 +701,10 @@ label #menubtn
 .skills-content .right .mysql::before{
     width: 60%;
 }
-
+#skills2 .skills-content .right
+{
+    order: -1;
+}
 /*------------------------------------------*/
 
 
@@ -1195,14 +1201,9 @@ label #menubtn
         margin-bottom: 5rem;
         margin-top: 10rem;
     }
-    #skills2 .skills-content .left
+    #skills2
     {
-        order: 0;
-        background-color: brown;
-    }
-    #skills2 .skills-content .right
-    {
-        order: 1;
+        margin-top: -20rem;
     }
     .contact .contact-content
     {
@@ -1339,23 +1340,19 @@ label #menubtn
 
 }
 @media (max-width: 500px) {
-    .home .home-content .text-2
-    {
-        font-size: 50px;
-    }
-    .home .home-content .text-3{
-        font-size: 27px;
-    }
+    
     .about .about-content .right .text,
     .skills .skills-content .left .text{
         font-size: 19px;
     }
-    .contact .right form .fields{
-        flex-direction: column;
-    }
+    
     .contact .right form .name,
     .contact .right form .email{
-        margin: 0;
+        margin-bottom: 10px;
+    }
+    .contact .right form .button
+    {
+        margin-top: 3rem;
     }
     .scroll-up-btn{
         right: 15px;
@@ -1391,7 +1388,35 @@ label #menubtn
         padding: 0.8rem 1rem;
         z-index: 10;
     }
+    header .landing-text h1
+    {
+        font-size: 8rem;
+    }
+    header .landing-text .hello
+    {
+        font-size: 3rem;
+        margin-bottom: 4rem;
+    }
+    .about .about-content2 .main-about .about-information span h2
+    {
+        font-size: 12px;
+    }
+    .about .about-content2 .main-about .about-information i
+    {
+        font-size: 12px;
+    }
 }
+@media (max-width: 440px) {
+    section .title 
+    {
+        font-size: 35px;
+    }
+    section .title::after
+    {
+        font-size: 15px;
+    }
+}
+
 
 
 
